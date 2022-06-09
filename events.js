@@ -1,5 +1,7 @@
 // 引入 events 模块
-import { EventEmitter } from 'events';
+var events = require('events');
+// 创建 eventEmitter 对象
+var EventEmitter = new events.EventEmitter();
 
 // 创建事件处理程序
 var connectHandler = function connected() {
