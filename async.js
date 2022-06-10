@@ -1,4 +1,4 @@
-var fs = require("fs");
+import fs from "fs";
 
 console.log("阻塞代码实例");
 //阻塞代码实例

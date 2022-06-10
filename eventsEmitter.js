@@ -1,5 +1,8 @@
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+// 引入 events 模块
+import { EventEmitter } from 'events';
+
+// 创建 eventEmitter 对象
+var eventEmitter = new EventEmitter();
 
 // 监听器 #1
 var listener1 = function listener1() {
@@ -20,7 +23,7 @@ var listener3 = function listener3() {
 eventEmitter.on('connection', listener1);
 
 // 绑定 connection 事件，处理函数为 listener2
-eventEmitter.addListener('connection', listener2);  // no difference with eventEmitter.on('connection',listener2);
+eventEmitter.addListener('connection', listener2);  // No difference with eventEmitter.on('connection',listener2);
 
 // 绑定 connection 事件，处理函数为 listener3 
 eventEmitter.once('connection', listener3);
@@ -39,6 +42,7 @@ console.log("listener1 不再受监听。");
 // 触发连接事件
 eventEmitter.emit('connection');
 
+// Count the listener of the event
 eventListeners = eventEmitter.listenerCount('connection');
 console.log(eventListeners + " 个监听器监听连接事件。");
 

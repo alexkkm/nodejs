@@ -1,5 +1,6 @@
 // 引入 events 模块
-var events = require('events');
+import events from 'events';
+
 // 创建 eventEmitter 对象
 var EventEmitter = new events.EventEmitter();
 

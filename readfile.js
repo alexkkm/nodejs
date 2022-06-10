@@ -1,6 +1,6 @@
-var fs = require("fs");
+import { readFile } from "fs";
 
-fs.readFile('input.txt', function (err, data) {
+readFile('input.txt', function (err, data) {
     if (err) {
         console.log(err.stack);
         return;

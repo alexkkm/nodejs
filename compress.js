@@ -1,5 +1,5 @@
-var fs = require("fs");
-var zlib = require('zlib');
+import fs from "fs";
+import zlib from "zlib";
 
 // 压缩 input.txt 文件为 input.txt.gz
 fs.createReadStream('input.txt')

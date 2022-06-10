@@ -1,8 +1,8 @@
-var fs = require("fs");
+import { createReadStream } from "fs";
 var data = '';
 
 // 创建可读流
-var readerStream = fs.createReadStream('input.txt');
+var readerStream = createReadStream('input.txt');
 
 // 设置编码为 utf8。
 readerStream.setEncoding('UTF8');
