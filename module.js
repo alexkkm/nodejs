@@ -1,2 +1,3 @@
-var hello = require('./hello');
-hello.world();
+import world from './hello.js';
+
+world();

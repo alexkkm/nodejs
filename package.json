@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/alexkkm/nodejs/issues"
   },
-  "homepage": "https://github.com/alexkkm/nodejs#readme"
+  "homepage": "https://github.com/alexkkm/nodejs#readme",
+  "type": "module"
 }
