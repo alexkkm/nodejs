@@ -32,7 +32,7 @@ eventEmitter.once('connection', listener3);
 var eventListeners = eventEmitter.listenerCount('connection');
 console.log(eventListeners + " 个监听器监听连接事件。");
 
-// 处理 connection 事件 
+// 触发 connection 事件 
 eventEmitter.emit('connection');
 
 // 移除监绑定的 listener1 函数

@@ -1,18 +1,15 @@
-import fs from "fs";
+import { readFile, readFileSync } from "fs";
 
-console.log("阻塞代码实例");
-//阻塞代码实例
-var data = fs.readFileSync('input.txt');
-
-console.log(data.toString());
-console.log("程序执行结束!");
-
-
-console.log("非阻塞代码实例");
-//非阻塞代码实例
-fs.readFile('input.txt', function (err, data) {
-    if (err) return console.error(err);
-    console.log(data.toString());
+// 异步读取 do after the process running
+readFile('input.txt', function (err, data) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log("异步读取: " + data.toString());
 });
 
-console.log("程序执行结束!");
+// 同步读取 do while the process running
+var data = readFileSync('input.txt');
+console.log("同步读取: " + data.toString());
+
+console.log("程序执行完毕。");
